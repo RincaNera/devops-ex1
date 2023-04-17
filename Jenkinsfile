@@ -3,7 +3,11 @@ pipeline {
     triggers {
         pollSCM('*/2 * * * *')
     }
-    stage('HelloWorld') {
-        echo 'AYAYA....'
+    stages {
+        stage('HelloWorld') {
+            step {
+                echo 'AYAYA....'
+            }
+        }
     }
 }
