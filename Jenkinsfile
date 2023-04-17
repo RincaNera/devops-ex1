@@ -1,6 +1,9 @@
 pipeline {
     agent any
-    stage('Deploy') {
-        echo 'Deploying....'
+    triggers {
+        pollSCM('*/2 * * * *')
+    }
+    stage('HelloWorld') {
+        echo 'AYAYA....'
     }
 }
